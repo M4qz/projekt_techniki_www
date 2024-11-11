@@ -1,0 +1,8 @@
+stopka i menu do resize (done)
+naprawic pasek boczny (done)
+zrobic tabele rektorow
+
+jak background na innny kolor to pol tekstu sie jebie (naprawione)
+problemem bylo ze przy resize uklad strony czyli content 
+i menu nie zwiekszaly wysokosci i kolor byl uzalezniony od 
+koloru backgroundu

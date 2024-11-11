@@ -1,0 +1,212 @@
+/* General Page Styles */
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures the body stretches across the entire height */
+    background: #fff9e6; /* Light yellow background color */
+}
+
+/* Header Styles */
+.header {
+    background-color: #f4d03f; /* Warm yellow header color */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px; /* Default font size for the header */
+    font-weight: bold;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    background-color: #fff9e6; /* Light yellow background */
+    height: 100vh; /* Container height stretches to 100% of the viewport */
+    flex-direction: row; /* Sidebar and content side by side */
+}
+
+/* Content Area */
+.content {
+    flex: 1; /* Allow content to take available space */
+    padding: 20px;
+    color: #333333;
+    overflow: hidden; /* Prevent text from overlapping images */
+    position: relative;
+    height: 100%;
+    padding-top: 20px; /* Extra padding so text is not glued to the top */
+}
+
+/* Sidebar Menu Styles */
+.sidebar {
+    width: 150px;
+    background-color: #f39c12; /* Warm orange color for sidebar */
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Ensures sidebar stretches to the full height of the viewport */
+}
+
+/* Sidebar links */
+.sidebar a {
+    color: #fefefe; /* White text for links */
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Image alignment in content */
+.content img {
+    display: block;
+    float: left; /* Floats images to the left */
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 450px; /* Width of images */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.content .herb {
+    float: right; /* Positions image on the right */
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: -415px; /* Moves the image upwards */
+    width: 350px; /* Default width for the herb image */
+    height: auto; /* Automatic scaling for height */
+}
+
+/* Clearing float */
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Top-right menu */
+.menu {
+    width: 300px;
+    background-color: #fff9e6; /* Same background as content area */
+    color: #f39c12; /* Orange color for text */
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+}
+
+.menu a {
+    padding: 0 10px;
+    text-decoration: none;
+    color: #000000; /* Orange color for links */
+}
+
+/* Footer */
+.footer {
+    position: fixed; /* Stick the footer to the bottom-right corner */
+    bottom: 0;
+    right: 0;
+    background-color: #d35400; /* Deep orange background for footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: auto;
+    z-index: 1000;
+}
+
+.footer a {
+    color: #fff9e6; /* Light yellow color for links in footer */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+/* Media Queries - Adjustments based on screen width */
+
+/* Reduce font size in header and content on small screens */
+@media (max-width: 1350px) {
+    body {
+        background: linear-gradient(to right, #f39c12 150px, #fff9e6 0);
+    }
+    .content {
+        overflow: visible;
+        height: auto;
+    }
+    .sidebar {
+        top: 0;
+        height: 100vh;
+    }
+    .content img {
+        all: unset;
+    }
+    .content .herb {
+        all: unset;
+    }
+    .content img,
+    .content .herb {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        height: auto;
+    }
+    .content .herb {
+        margin: 20px auto;
+        width: 350px;
+    }
+    .footer {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        background: linear-gradient(to right, #f39c12 120px, #fff9e6 0);
+    }
+    .header {
+        font-size: 20px;
+    }
+    .sidebar {
+        width: 120px;
+    }
+    .menu {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+    .content img,
+    .content .herb {
+        max-width: 90%;
+    }
+    .footer {
+        font-size: 10px;
+    }
+}
+
+/* Adjustments for smaller screens (phones in landscape mode) */
+@media (max-width: 768px) {
+    body {
+        background: linear-gradient(to right, #f39c12 80px, #fff9e6 0);
+    }
+    .header {
+        font-size: 18px;
+    }
+    .sidebar {
+        width: 80px;
+    }
+    .menu {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+    .footer {
+        font-size: 7px;
+    }
+}
+
+
+
+

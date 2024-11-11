@@ -1,0 +1,222 @@
+/* General Page Styles */
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Zapewnia, że body rozciąga się na całą wysokość */
+    background: #ffebcd; /* Pomarańczowy gradient */
+
+}
+
+/* Header Styles */
+.header {
+    background-color: #ffa07a; /* Jasny pomarańczowy */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px; /* Domyślny rozmiar czcionki w nagłówku */
+    font-weight: bold;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    background-color: #ffebcd; /* Blady pomarańczowy */
+    height: 100vh; /* Ustawia wysokość kontenera na 100% wysokości okna przeglądarki */
+    flex-direction: row; /* Ustawia menu i content obok siebie */
+}
+
+/* Content Area */
+.content {
+    flex: 1; /* Pozwól treści zajmować dostępne miejsce */
+    padding: 20px;
+    color: black;
+    overflow: hidden; /* Zapewnia, że tekst nie będzie nakładał się na zdjęcia */
+    position: relative; /* Umożliwia ustawienie elementów w prawym górnym rogu w kontekście kontenera */
+    height: 100%; /* Ustawia wysokość contentu na 100% wysokości kontenera */
+    padding-top: 20px; /* Dodatkowy padding, aby tekst nie był przyklejony do górnej krawędzi */
+}
+
+/* Sidebar Menu Styles */
+.sidebar {
+    width: 150px;
+    background-color: #ff4500; /* Ciemniejszy pomarańczowy */
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Zmieniono na 100vh, aby zawsze rozciągał się na pełną wysokość okna */
+}
+
+/* Sidebar links */
+.sidebar a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Wyrównanie zdjęć w treści */
+.content img {
+    display: block;
+    float: left; /* Używamy float, aby zdjęcia były po lewej stronie */
+    margin-right: 20px; /* Odstęp od tekstu */
+    margin-bottom: 20px; /* Odstęp między kolejnymi obrazami */
+    width: 450px; /* Szerokość zdjęć */
+    height: auto; /* Automatyczne dopasowanie wysokości, aby zachować proporcje */
+}
+
+/* Przywrócenie porządku po float */
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Menu w prawym górnym rogu */
+.menu {
+    width: 300px; /* Szerokość menu */
+    background-color: #ff6347; /* Czerwony pomarańczowy */
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+}
+
+.menu a {
+    padding: 0 10px; /* Odstępy po bokach linków */
+    text-decoration: none;
+    color: white;
+}
+
+/* Stopka */
+.footer {
+    position: fixed; /* Przyklejamy stopkę do prawego dolnego rogu */
+    bottom: 0;
+    right: 0;
+    background-color: #ff4500; /* Ciemniejszy pomarańczowy */
+    color: white; /* Biały tekst */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    padding: 10px;
+    width: auto;
+    z-index: 1000; /* Zapewnia, że stopka będzie zawsze na wierzchu */
+}
+
+.footer a {
+    color: white; /* Kolor linków */
+    text-decoration: none; /* Usuwamy podkreślenie z linków */
+    margin: 0 10px; /* Odstęp między linkami */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Podkreślenie linków po najechaniu */
+}
+
+/* Media Queries - Zmiany w zależności od szerokości okna */
+
+/* Zmniejszenie rozmiaru czcionki w nagłówku i treści na małych ekranach */
+@media (max-width: 1350px) {
+    body {
+        background: linear-gradient(to right, #ff4500 150px, #ffebcd 0); /* Pomarańczowy gradient */
+    }
+    .content {
+        overflow: visible;
+        height: auto;
+    }
+    .sidebar {
+        top: 0; /* Ustala pozycję na górze */
+        height: 100vh; /* Zapewnia, że sidebar rozciąga się na pełną wysokość */
+    }
+    .content img {
+        all: unset;
+    }
+    .content img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%; /* Allow images to be responsive */
+        height: auto;
+    }
+    .content .herb {
+        margin: 20px auto;
+        width: 350px;
+    }
+    .footer {
+        font-size: 12px; /* Zmniejszenie czcionki w stopce */
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        background: linear-gradient(to right, #ff4500 120px, #ffebcd 0); /* Pomarańczowy gradient */
+    }
+    .header {
+        font-size: 20px;
+    }
+    .sidebar {
+        width: 120px; /* Zmniejszamy szerokość sidebar */
+    }
+    .menu {
+        font-size: 18px;
+        padding: 15px 0; /* Zmniejszamy padding */
+    }
+    .content img {
+        max-width: 90%; /* Scale down images slightly */
+    }
+    .footer {
+        font-size: 10px; /* Zmniejszenie czcionki w stopce */
+    }
+}
+/* Adjustments for small screens (phones in landscape mode) */
+/* Stylowanie dla ekranów o szerokości maksymalnie 768px */
+@media (max-width: 768px) {
+    body {
+        background: linear-gradient(to right, #ff4500 74px, #ffebcd 0);
+        overflow-x: hidden;
+    }
+    .header {
+        font-size: 18px;
+    }
+    .sidebar {
+        width: 80px;
+    }
+    .menu {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+    .footer {
+        font-size: 7px;
+    }
+    /* Stylowanie tabelki na mniejszych ekranach */
+    .content table {
+        font-size: 12px; /* Zmniejsza ogólny rozmiar czcionki w tabeli */
+        width: 100%; /* Ustawia szerokość tabeli na 100% */
+    }
+    .content table th, .content table td {
+        padding: 4px; /* Zmniejsza padding w komórkach */
+        text-align: center;
+    }
+    .content table img {
+        width: 60px; /* Zmniejsza rozmiar obrazków */
+        height: auto;
+    }
+    .content h2 {
+        font-size: 20px; /* Zmniejsza rozmiar nagłówka tabeli */
+    }
+}
+
+
+
+
+
+
+
+
+
+
