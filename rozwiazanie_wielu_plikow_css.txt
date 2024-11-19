@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt</title>
+    <link id="dynamic-stylesheet" rel="stylesheet" href="strona_glowna.css">
+    <script>
+        // Funkcja zmieniająca styl tła w zależności od szerokości okna
+        function updateBackgroundColor() {
+            const body = document.body;
+            const width = window.innerWidth;
+
+            if (width <= 768) {
+                body.style.background = "linear-gradient(to right, #27408b 80px, #d0c5eb 0)";
+            } else if (width <= 1024) {
+                body.style.background = "linear-gradient(to right, #27408b 120px, #d0c5eb 0)";
+            } else if (width <= 1350) {
+                body.style.background = "linear-gradient(to right, #27408b 150px, #d0c5eb 0)";
+            } else {
+                body.style.background = "#d0c5eb";
+            }
+        }
+
+        // Wywołaj funkcję na starcie i przy zmianie rozmiaru okna
+        window.addEventListener('resize', updateBackgroundColor);
+        window.addEventListener('DOMContentLoaded', updateBackgroundColor);
+    </script>
+</head>
+<body>
+
+    <!-- Page Header -->
+    <div class="header" style="background-color: #d4f1f9;">
+        <h1>Uniwersytet Jagielloński</h1>
+        <p>Lasciate ogni speranza voi ch'entrate</p>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Sidebar Menu -->
+        <div class="sidebar" style="background-color: #27408b; color: white;">
+            <a href="WFAIS.html" style="color: white;">WFAIS</a>
+            <a href="WPIA.html" style="color: white;">WPIA</a>
+            <a href="WZKS.html" style="color: white;">WZKS</a>
+            <a href="WBBIB.html" style="color: white;">WBBIB</a>
+            <a href="WGIG.html" style="color: white;">WGIG</a>
+            <a href="Rektorzy.html" style="color: white;">Rektorzy</a>
+        </div>
+           
+        <div class="menu" style="background-color: #99d9ea; color: blue;">
+            <a href="https://pl.wikipedia.org/wiki/Uniwersytet_Jagielloński" style="color: blue;">Wiki</a>
+            <a href="https://www.uj.edu.pl/pl" style="color: blue;">Uczelnia</a>
+            <a href="https://fais.uj.edu.pl" style="color: blue;">WFAIS</a>
+            <a href="https://www.uj.edu.pl/kontakt" style="color: blue;">Kontakt</a>
+        </div>
+        
+        <!-- Content Area -->
+        <div class="content" style="color: black;">
+            <h2>O Uniwersytecie Jagiellońskim</h2>
+            <p>Uniwersytet Jagielloński w Krakowie (UJ) to najstarsza uczelnia wyższa w Polsce</p>
+            <p>i jedna z najstarszych w Europie. Został założony w 1364 roku przez króla Kazimierza</p>
+            <p>Wielkiego. Jest to uczelnia o międzynarodowym prestiżu, która odgrywa kluczową rolę w</p>
+            <p>polskiej i europejskiej nauce i edukacji. Uniwersytet Jagielloński jest jednym z czołowych</p>
+            <p>ośrodków naukowych w Polsce, który posiada szeroką ofertę edukacyjną, obejmującą wszystkie </p>
+            <p>najważniejsze dziedziny nauki – od humanistyki po nauki przyrodnicze, medycynę, prawo, ekonomię</p>
+            <p>i nauki społeczne. UJ w Krakowie to także ośrodek życia akademickiego, kulturalnego i intelektualnego,</p>
+            <p>którego studenci mają dostęp do licznych inicjatyw naukowych, artystycznych oraz wydarzeń kulturalnych.</p>
+            <p>Uniwersytet współpracuje z innymi uczelniami i ośrodkami badawczymi na całym świecie. Jako </p>
+            <p>uczelnia o długiej tradycji, Uniwersytet Jagielloński nie tylko kształci młode pokolenia, ale także wpływa</p>
+            <p>na rozwój kultury i nauki na poziomie krajowym i międzynarodowym.</p>
+            <img src="images/Herb_Uniwersytetu_Jagiellońskiego.png" alt="Herb Uniwersytetu Jagiellońskiego" class="herb">
+            <img src="images/building.png" alt="Zdjęcie budynku Uniwersytetu Jagiellońskiego">
+            <img src="images/11zon_resized.jfif" alt="Stare zdjęcie budynku Collegium Maius">
+        </div>
+        
+        <div class="footer" style="background-color: #333; color: white;">
+            <p>&copy; 2024 Maksymilian Brzostowski - Wszelkie prawa zastrzeżone</p>
+            <p><a href="https://pl.wikipedia.org/wiki/Polityka_prywatności" style="color: white;">Polityka prywatności</a> | <a href="https://github.com/M4qz" style="color: white;">Kontakt</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
