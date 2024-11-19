@@ -9,7 +9,7 @@ Projekt 1:
 6. Formatowanie strony w osobnym pliku css
 7. Strona powinna być również dostosowana do urządzeń mobilnych, np. używając metody flex lub podobnej
 8. Proszę skorzystać z klas w css
-10. Termin do poniedziałku 84.12.2024
+10. Termin do poniedziałku 06.12.2024
 11. Można umieścić elementy javascript, ale nie jest to w ogóle koniecznie (nie ma ich)
 
 Stronke najlepiej odpalać z pliku strona_glowna.html
